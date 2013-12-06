@@ -1,0 +1,30 @@
+{
+    "name": "mapbox",
+    "repo": "mapbox/mapbox.js",
+    "version": "1.5.1",
+    "dependencies": {
+        "dominicbarnes/Leaflet": "*",
+        "dominicbarnes/sanitize-caja": "*",
+        "dominicbarnes/mustache.js": "*"
+    },
+    "scripts": [
+        "index.js",
+        "mapbox.js",
+        "src/geocoder.js",
+        "src/marker.js",
+        "src/marker.js",
+        "src/tile_layer.js",
+        "src/info_control.js",
+        "src/share_control.js",
+        "src/legend_control.js",
+        "src/geocoder_control.js",
+        "src/grid_control.js",
+        "src/grid_layer.js",
+        "src/marker_layer.js",
+        "src/map.js",
+        "src/config.js"
+    ],
+    "json": [
+        "package.json"
+    ]
+}
