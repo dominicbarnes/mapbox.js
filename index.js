@@ -1,2 +1,2 @@
-require('./leaflet');
+require('leaflet');
 require('./mapbox');

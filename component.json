@@ -5,24 +5,30 @@
     "dependencies": {
         "dominicbarnes/Leaflet": "*",
         "dominicbarnes/sanitize-caja": "*",
-        "dominicbarnes/mustache.js": "*"
+        "dominicbarnes/mustache.js": "*",
+        "dominicbarnes/corslite": "*",
+        "bestiejs/json3": "gh-pages"
     },
     "scripts": [
         "index.js",
         "mapbox.js",
+        "src/config.js",
         "src/geocoder.js",
-        "src/marker.js",
-        "src/marker.js",
-        "src/tile_layer.js",
-        "src/info_control.js",
-        "src/share_control.js",
-        "src/legend_control.js",
         "src/geocoder_control.js",
+        "src/grid.js",
         "src/grid_control.js",
         "src/grid_layer.js",
-        "src/marker_layer.js",
+        "src/info_control.js",
+        "src/legend_control.js",
+        "src/load_tilejson.js",
         "src/map.js",
-        "src/config.js"
+        "src/marker.js",
+        "src/marker_layer.js",
+        "src/request.js",
+        "src/share_control.js",
+        "src/tile_layer.js",
+        "src/url.js",
+        "src/util.js"
     ],
     "json": [
         "package.json"
