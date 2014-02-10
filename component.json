@@ -1,7 +1,7 @@
 {
     "name": "mapbox",
     "repo": "mapbox/mapbox.js",
-    "version": "1.5.1",
+    "version": "1.6.1",
     "dependencies": {
         "dominicbarnes/Leaflet": "v0.7",
         "dominicbarnes/sanitize-caja": "*",
@@ -13,6 +13,7 @@
         "index.js",
         "mapbox.js",
         "src/config.js",
+        "src/feature_layer.js",
         "src/geocoder.js",
         "src/geocoder_control.js",
         "src/grid.js",
@@ -23,9 +24,9 @@
         "src/load_tilejson.js",
         "src/map.js",
         "src/marker.js",
-        "src/marker_layer.js",
         "src/request.js",
         "src/share_control.js",
+        "src/simplestyle.js",
         "src/tile_layer.js",
         "src/url.js",
         "src/util.js"
