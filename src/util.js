@@ -21,18 +21,24 @@ module.exports = {
         }
     },
     strict_oneof: function(_, values) {
-        if (values.indexOf(_) == -1) {
+        if (!contains(_, values)) {
             throw new Error('Invalid argument: ' + _ + ' given, valid values are ' +
                 values.join(', '));
         }
     },
     strip_tags: function(_) {
-        var div = document.createElement('div');
-        div.innerHTML = _;
-        return div.textContent || div.innerText || '';
+        return _.replace(/<[^<]+>/g, '');
     },
     lbounds: function(_) {
         // leaflet-compatible bounds, since leaflet does not do geojson
         return new L.LatLngBounds([[_[1], _[0]], [_[3], _[2]]]);
     }
 };
+
+function contains(item, list) {
+    if (!list || !list.length) return false;
+    for (var i = 0; i < list.length; i++) {
+        if (list[i] == item) return true;
+    }
+    return false;
+}

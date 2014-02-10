@@ -1,3 +1,24 @@
+## v1.6.1
+
+* Adds `select` and `autoselect` events to the geocoderControl to allow for
+  finer-tuned listening for user actions around geocoding.
+* Improved documentation
+* Updated to [Leaflet 0.7.2](https://github.com/Leaflet/Leaflet/blob/master/CHANGELOG.md#072-january-17-2014)
+
+## v1.6.0
+
+* Added support for [simplestyle-spec](https://github.com/mapbox/simplestyle-spec) 1.1.0,
+  with Polygon and LineString featuretype support.
+* `L.mapbox.markerLayer` is now `L.mapbox.featureLayer`. An alias from the former
+  to the latter is in place and will be removed at `v2.0.0`.
+
+## v1.5.2
+
+* Updated to [Leaflet 0.7.1](https://github.com/Leaflet/Leaflet/blob/master/CHANGELOG.md#071-december-6-2013)
+* Improved performance of adding `markerLayer`. [#595](https://github.com/mapbox/mapbox.js/issues/595)
+* Added `max-width` to the legend. [#592](https://github.com/mapbox/mapbox.js/issues/592)
+* Started maintaining a [FAQ](https://github.com/mapbox/mapbox.js/blob/master/FAQ.md).
+
 ## v1.5.1
 
 * Adjusted infoControls default position to the bottom right.
@@ -67,7 +88,7 @@
 ## v1.1.0
 
 * Updated Leaflet dependency to v0.6.1
-* New standalone MapBox.js without bundled Leaflet dependency
+* New standalone Mapbox.js without bundled Leaflet dependency
 * Simpler SSL Support (#428)
 * Share Control (#432)
 
@@ -102,7 +123,7 @@
 ## v1.0.0
 
 **This is a breaking release that should be treated as a clean rewrite
-of MapBox.js. Existing code that uses MapBox v0.6.x will need to be rewritten.**
+of Mapbox.js. Existing code that uses Mapbox v0.6.x will need to be rewritten.**
 
 Consult documentation for the new API.
 
@@ -111,7 +132,7 @@ Consult documentation for the new API.
 * Fix for JSONP issues in IE9 and IE10 in upstream libraries
 * Fix bug in `layer.disable` and `layer.enable` when layer not attached to a map
 * Fix bug where disabling a layer didn't update compositing
-* Automatic compositing now checks that a layer is hosted by MapBox hosting
+* Automatic compositing now checks that a layer is hosted by Mapbox hosting
 
 ### v0.6.6
 
@@ -157,7 +178,7 @@ Consult documentation for the new API.
 
 ### v0.6.0
 
-* Add automatic support for MapBox hosting composting
+* Add automatic support for Mapbox hosting composting
 * Update Wax to 7.0.0dev7
 * New api for `mapbox.ui`
 * Name layers using IDs instead of names
