@@ -120,7 +120,7 @@ var LMap = L.Map.extend({
             this.shareControl._setTileJSON(json);
         }
 
-        if (!this._loaded) {
+        if (!this._loaded && json.center) {
             var zoom = json.center[2],
                 center = L.latLng(json.center[1], json.center[0]);
 
@@ -133,6 +133,10 @@ var LMap = L.Map.extend({
 
         if (this.infoControl && this._loaded) {
             this.infoControl.addInfo(layer.options.infoControl);
+        }
+
+        if (this.attributionControl && this._loaded && layer.getAttribution) {
+            this.attributionControl.addAttribution(layer.getAttribution());
         }
 
         if (!(L.stamp(layer) in this._zoomBoundLayers) &&

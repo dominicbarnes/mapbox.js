@@ -128,6 +128,12 @@ describe('L.mapbox.map', function() {
             var map = L.mapbox.map(element, 'mapbox.map-0l53fhk2', {shareControl: {position: 'bottomleft'}});
             expect(map.shareControl.options.position).to.equal('bottomleft');
         });
+
+        it('supports tilejson without a center property', function(){
+            var map = L.mapbox.map(element, helpers.tileJSON_nocenter);
+            expect(map._loaded).not.to.be.ok();
+
+        });
     });
 
     describe('layers', function() {
@@ -219,6 +225,24 @@ describe('L.mapbox.map', function() {
             }).to.throwException(function(e) {
                 expect(e.message).to.eql('Map container is already initialized.');
             });
+        });
+
+        it('attributionControl enabled', function(done) {
+            var map = L.mapbox.map(element, 'mapbox.map-0l53fhk2', {
+                infoControl: false,
+                attributionControl: true
+            });
+
+            map.on('ready', function() {
+                expect(map.attributionControl._container.innerHTML).to.eql('Data provided by NatureServe in collaboration with Robert Ridgely');
+                map.removeLayer(map.tileLayer);
+                expect(map.attributionControl._container.innerHTML).to.eql('');
+                done();
+            });
+
+            server.respondWith("GET", "http://a.tiles.mapbox.com/v3/mapbox.map-0l53fhk2.json",
+                [200, { "Content-Type": "application/json" }, JSON.stringify(helpers.tileJSON)]);
+            server.respond();
         });
     });
 });

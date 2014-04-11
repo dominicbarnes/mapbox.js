@@ -15,6 +15,59 @@ expect.Assertion.prototype.near = function(expected, delta) {
     }
 };
 
+helpers.geocoderAustin = {
+"query": ["austin"],
+"results": [[{
+    "bounds": [-97.9383829999999, 30.098659, -97.5614889999999, 30.516863],
+    "lat": 30.3071816,
+    "lon": -97.7559964,
+    "name": "Austin",
+    "score": 600000790107194.8,
+    "type": "city",
+    "id": "mapbox-places.4201"
+}]]};
+
+helpers.geocoderWhiteHouse = {
+  "results": [
+    [
+      {
+        "type": "address",
+        "name": "1600 Pennsylvania Ave NW",
+        "lat": 38.898761,
+        "lon": -77.035117,
+        "id": "address.1104748184898"
+      },
+      {
+        "type": "city",
+        "name": "Washington",
+        "id": "mapbox-places.20001"
+      },
+      {
+        "type": "province",
+        "name": "District of Columbia",
+        "id": "province.1190806886"
+      },
+      {
+        "type": "country",
+        "name": "United States",
+        "id": "country.4150104525"
+      }
+    ]
+  ],
+  "attribution": {
+    "mapbox-places": "<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>"
+  },
+  "query": [
+    "1600",
+    "pennsylvania",
+    "ave",
+    "nw",
+    "washington",
+    "dc",
+    "20500"
+  ]
+};
+
 helpers.tileJSON = {
     "attribution":"Data provided by NatureServe in collaboration with Robert Ridgely",
     "bounds":[-180,-85.0511,180,85.0511],
@@ -39,6 +92,24 @@ helpers.tileJSON = {
         "http://c.tiles.mapbox.com/v3/examples.map-8ced9urs/{z}/{x}/{y}.png",
         "http://d.tiles.mapbox.com/v3/examples.map-8ced9urs/{z}/{x}/{y}.png"],
     "webpage":"http://tiles.mapbox.com/examples/map/map-8ced9urs"
+};
+
+helpers.tileJSON_improvemap = {
+    "attribution": "<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>",
+    "autoscale": true,
+    "bounds": [-180, -85.0511, 180, 85.0511],
+    "center": [0, 0, 3],
+    "data": ["http://a.tiles.mapbox.com/v3/examples.h8e9h88l/markers.geojsonp"],
+    "geocoder": "http://a.tiles.mapbox.com/v3/examples.h8e9h88l/geocode/{query}.jsonp",
+    "id": "examples.h8e9h88l",
+    "maxzoom": 22,
+    "minzoom": 0,
+    "name": "My Mapbox Streets Map",
+    "private": true,
+    "scheme": "xyz",
+    "tilejson": "2.0.0",
+    "tiles": ["http://a.tiles.mapbox.com/v3/examples.h8e9h88l/{z}/{x}/{y}.png"],
+    "webpage": "http://a.tiles.mapbox.com/v3/examples.h8e9h88l/page.html"
 };
 
 helpers.tileJSON_autoscale = {
@@ -73,6 +144,23 @@ helpers.tileJSON_autoscale = {
   "geocoder": "http://a.tiles.mapbox.com/v3/tmcw.map-oitj0si5/geocode/{query}.jsonp",
   "id": "tmcw.map-oitj0si5",
   "maxzoom": 19
+};
+
+helpers.tileJSON_nocenter = {
+    "attribution": "<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>",
+    "autoscale": true,
+    "bounds": [-180, -85.0511, 180, 85.0511],
+    "data": ["http://a.tiles.mapbox.com/v3/examples.h8e9h88l/markers.geojsonp"],
+    "geocoder": "http://a.tiles.mapbox.com/v3/examples.h8e9h88l/geocode/{query}.jsonp",
+    "id": "examples.h8e9h88l",
+    "maxzoom": 22,
+    "minzoom": 0,
+    "name": "My Mapbox Streets Map",
+    "private": true,
+    "scheme": "xyz",
+    "tilejson": "2.0.0",
+    "tiles": ["http://a.tiles.mapbox.com/v3/examples.h8e9h88l/{z}/{x}/{y}.png"],
+    "webpage": "http://a.tiles.mapbox.com/v3/examples.h8e9h88l/page.html"
 };
 
 helpers.geoJson = {

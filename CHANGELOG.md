@@ -1,3 +1,18 @@
+## v1.6.3
+
+* Adds support for bulk geocoding in the L.mapbox.geocoder API
+* Adds IE8 vector layer support with VML
+* No longer uses `._createPane` internally
+* CSS improvements
+
+## v1.6.2
+
+* Removes `editLink` option for `L.mapbox.infoControl`
+* Recognizes and updates `Improve this Map` link in `L.mapbox.infoControl`
+* Improved documentation
+* Improved [popup styles](https://github.com/mapbox/mapbox.js/pull/659)
+* Support for point results from the geocoder in `L.mapbox.geocoderControl`
+
 ## v1.6.1
 
 * Adds `select` and `autoselect` events to the geocoderControl to allow for
