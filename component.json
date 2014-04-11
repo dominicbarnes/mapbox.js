@@ -1,12 +1,12 @@
 {
     "name": "mapbox",
-    "repo": "mapbox/mapbox.js",
-    "version": "1.6.1",
+    "repository": "mapbox/mapbox.js",
+    "version": "1.6.2",
     "dependencies": {
-        "dominicbarnes/Leaflet": "v0.7",
-        "dominicbarnes/sanitize-caja": "*",
-        "dominicbarnes/mustache.js": "*",
-        "dominicbarnes/corslite": "*",
+        "dominicbarnes/leaflet": "v0.7.2",
+        "dominicbarnes/sanitize-caja": "master",
+        "dominicbarnes/mustache.js": "master",
+        "dominicbarnes/corslite": "master",
         "bestiejs/json3": "gh-pages"
     },
     "scripts": [
