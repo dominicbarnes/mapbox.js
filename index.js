@@ -1,2 +1,2 @@
-require('./leaflet');
-require('./mapbox');
+require('leaflet');
+module.exports = require('./mapbox');

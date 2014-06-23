@@ -1,0 +1,48 @@
+{
+  "author": "Mapbox",
+  "name": "mapbox.js",
+  "repository": "mapbox/mapbox.js",
+  "description": "mapbox javascript api",
+  "version": "1.6.4",
+  "homepage": "http://mapbox.com/",
+  "main": "index.js",
+  "dependencies": {
+    "Leaflet/Leaflet": "v0.7.3",
+    "dominicbarnes/mustache.js": "master",
+    "dominicbarnes/corslite": "master",
+    "dominicbarnes/sanitize-caja": "master"
+  },
+  "scripts": [
+    "index.js",
+    "mapbox.js",
+    "src/config.js",
+    "src/feature_layer.js",
+    "src/geocoder.js",
+    "src/geocoder_control.js",
+    "src/grid.js",
+    "src/grid_control.js",
+    "src/grid_layer.js",
+    "src/info_control.js",
+    "src/legend_control.js",
+    "src/load_tilejson.js",
+    "src/map.js",
+    "src/marker.js",
+    "src/request.js",
+    "src/share_control.js",
+    "src/simplestyle.js",
+    "src/tile_layer.js",
+    "src/url.js",
+    "src/util.js"
+  ],
+   "json": [
+    "package.json"
+  ],
+  "styles": [
+    "theme/style.css"
+  ],
+  "images": [
+    "theme/images/icons-000000@2x.png",
+    "theme/images/icons-ffffff@2x.png",
+    "theme/images/icons.svg"
+  ]
+}
